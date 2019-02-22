@@ -2,11 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import NewGameForm from './NewGameForm'
 import { Link } from 'react-router-dom'
-import ChatWindow from '../Game/ChatWindow'
 import { joinGame } from '../../actions/playerInputs'
-
-
-
 
 const buttonStyling = "button is-medium is-fullwidth is-white is-outlined"
 
@@ -17,7 +13,6 @@ class Lobby extends React.Component {
       games: []
     }
   }
-
 
   componentDidMount() {
     const { socket } = this.props

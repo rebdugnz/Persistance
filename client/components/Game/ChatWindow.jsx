@@ -30,12 +30,8 @@ class ChatWindow extends React.Component {
         })
     }
 
-
-
     addMsgToChat(msg) {
         let prevMsgs = this.state.msgs
-
-        // const newMsg = `${new Date}: ${msg}`
         prevMsgs.push(msg)
         this.setState({
             msgs:prevMsgs.map(msg => ({...msg})),
