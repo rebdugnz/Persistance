@@ -15,7 +15,6 @@ const Buttons = props => {
   const noms = props.currentGame.missions[mission_num - 1].rounds[round_num - 1].nominations
   const reqNoms = props.missionParams[mission_num -1].team_total
   const allNoms = reqNoms == noms.length 
-  const intentions = props.currentGame.missions[mission_num -1].intentions
   const onTeam = noms.reduce((acc, nom) => {
     if (nom.user_id == authId) return true  
     else return acc
@@ -24,7 +23,7 @@ const Buttons = props => {
   return (
     <div>
       {(gameStage == 'voting') && <ChoiceButtons />}
-      {(onTeam && gameStage == 'intentions' && (intentions.length < 0)) && <IntentionButtons />}
+      {(onTeam && gameStage == 'intentions') && <IntentionButtons />}
       {(gameStage == 'nominating' && isLeader && allNoms) && <ConfirmNom />}
     </div>
   )
