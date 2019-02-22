@@ -5,7 +5,7 @@ import {Tooltip} from 'react-tippy'
 
 
 const Mission = props => {
-  const { id, outcome } = props.mission
+  const { outcome } = props.mission
   const glow = (props.currentGame.currentMission.mission_num == props.number + 1) ? 'cake' : ''
   const iconDrop = props.currentGame.currentMission.mission_num > props.number + 1
   
