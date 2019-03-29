@@ -12,7 +12,6 @@ const StatusBar = props =>  {
     const onTeam = noms.find(player => player.user_id == authID)
     const { gameStage } = props.currentGame
     let displayText = ""
-    //depends on who you are what you see
 
     switch(gameStage) {
         case "voting":
@@ -34,7 +33,7 @@ const StatusBar = props =>  {
         case "nominating":
             switch(props.leader){
                 case true:
-                    switch(allNoms){ //need to check whether
+                    switch(allNoms){ 
                         case true:
                         displayText = "Confirm this team?"
                         break
@@ -63,6 +62,9 @@ const StatusBar = props =>  {
         break
         case "spyWin":
         displayText = "The Spies have won! They have sabotaged the Resistance."
+        break
+        case "hammerFail":
+        displayText = "The hammer round was voted down, spies win this one."
         break
         default:
         displayText = "404 this is not the page you were looking for - game stage not correctly defined"

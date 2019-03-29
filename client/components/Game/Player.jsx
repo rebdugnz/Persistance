@@ -22,7 +22,7 @@ class Player extends React.Component {
     }
 
     handleClick() {
-        const user = { id: this.props.auth.user.id } //needs to be from auth
+        const user = { id: this.props.auth.user.id } 
         const nom = { user, game: this.props.currentGame.game, nomination: { user: this.props.player } }
 
         const { round_num } = this.props.currentGame.currentRound
@@ -70,7 +70,7 @@ class Player extends React.Component {
     render() {
 
         const authID = this.props.auth.user.id
-        const id = authID // this needs to be auth user id
+        const id = authID
 
         const currentUser = this.props.currentGame.players.find(player => player.id == id)
         const userIsSpy = currentUser.role == 'spy'
@@ -85,7 +85,13 @@ class Player extends React.Component {
         const noms = this.props.currentGame.missions[mission_num - 1].rounds[round_num - 1].nominations
         const isNominated = noms.some(nom => (nom.user_id == this.props.player.id))
 
-        const glow = (isNominated && isSpy) ? 'nominated-spy-glow' : isSpy ? 'spy-glow' : isNominated ? 'nominated-glow' : ''
+        const glow = (isNominated && isSpy) 
+            ? 'nominated-spy-glow' 
+            : isSpy 
+                ? 'spy-glow' 
+                : isNominated 
+                    ? 'nominated-glow' 
+                    : ''
 
         return (
             <div>

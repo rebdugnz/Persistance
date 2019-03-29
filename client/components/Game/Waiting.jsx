@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import EmptyPlayer from './EmptyPlayer'
 import ReadyButton from './ReadyButton'
 import ChatWindow from './ChatWindow'
-import {updateCurrentGame, updateMissionParams} from '../../actions/currentGame'
+import { updateCurrentGame, updateMissionParams } from '../../actions/currentGame'
 
 
 // ReadyButton appears to leader, when socket is occupied by > 5 and < 10

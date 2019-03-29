@@ -1,14 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
-
-      /* Tooltip needs to display information about players,
-            but when leader is nominating, it MUST show that a click will nominate
-            irreversably. 
-        */
 
 const PlayerToolTip = props => {
     const {isHammer, authID, isLeader} = props
-    const { id, display_name, user_name } = props.player
+    const { id, user_name } = props.player
     const whoHammer = isHammer && authID == id 
     const whoLeader = isLeader && authID == id
     

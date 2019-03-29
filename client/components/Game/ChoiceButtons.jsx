@@ -25,7 +25,7 @@ class ChoiceButton extends React.Component {
         this.setState({hasVoted: true})
       })
   }
-
+ 
   render() {
 
     return this.state.hasVoted ? (

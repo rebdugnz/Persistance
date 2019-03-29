@@ -55,4 +55,3 @@ const mapStateToProps = ({ auth }) => {
 }
 
 export default connect(mapStateToProps)(Nav)
-// https://tinyurl.com/y7drmeck - grey
